@@ -1,8 +1,9 @@
 {
   "name": "redux-simple-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple starter package for Redux with React and Babel support",
   "main": "index.js",
+  "repository": "none",
   "scripts": {
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
