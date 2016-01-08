@@ -9,7 +9,7 @@ Checkout this repo, install depdencies, then start the gulp process with the fol
 
 ```
 	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReactStarter
+	> cd ReduxSimpleStarter
 	> npm install
 	> npm start
 ```
