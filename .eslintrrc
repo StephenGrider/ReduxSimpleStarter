@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "indent": 1,
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-indent-props": 1,
+    "react/jsx-indent": 1
+  }
+}
