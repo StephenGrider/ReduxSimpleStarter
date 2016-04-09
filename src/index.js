@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import SearchBar from './components/search_bar';
+import ytSearch from 'youtube-api-search';
 
-import App from './components/app';
-import reducers from './reducers';
+const YOUTUBE_API_KEY = 'AIzaSyAUTylvGCBsRikNM4JRLNdVlW6vP2NM1iY';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+    this.state = { videos: [] };
+
+    ytSearch({ key: YOUTUBE_API_KEY, term: 'Formation Beyonce' }, (videos) => {
+      this.setState({ videos });
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <SearchBar />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector('.container'));
