@@ -7,6 +7,7 @@ const API_KEY = "AIzaSyC8mevAQqji8_1A7-NkN9I6B7DxYpL2twY";
 
 // Create a new compnent. This componet should produce some HTML
 
+//functional components used whenever taking in info and spitting out jsx, also funcitonal component can contain class based components
 //considered a class "App"
 const App = () => {
   return (

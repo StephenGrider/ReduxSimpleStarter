@@ -12,8 +12,8 @@ class SearchBar extends Component {
     return (
       <div>
         <input 
-          value = {this.state.term}
-          onChange={event => this.setState({ term: event.target.value })}
+          value = {this.state.term} //makes it controlled component
+          onChange={event => this.setState({ term: event.target.value })} 
         />
       </div>
       );
@@ -22,4 +22,4 @@ class SearchBar extends Component {
 
 export default SearchBar;
 
-//functional components vs class based components
+//class based components used whenever a coponenet needs to be aware of state eg. data mannipulation, dom re-rendering
