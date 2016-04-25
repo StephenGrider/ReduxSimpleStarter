@@ -27,11 +27,18 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "font-awesome": "4.6.1",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
+    "react-awesome-modal": "0.3.2",
+    "react-bootstrap-datetimepicker": "0.0.22",
+    "react-bootstrap-modal": "2.1.0",
     "react-dom": "^0.14.3",
+    "react-modal": "1.2.1",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.1",
+    "react-select": "1.0.0-beta12",
+    "react-tooltip": "1.2.1",
     "redux": "^3.0.4"
   }
 }
