@@ -10,7 +10,7 @@ class SearchBar extends Component {
   //syntax for defining methods on a class
   render() {
     return (
-      <div>
+      <div className='search-bar'>
         <input 
           value = {this.state.term} //makes it controlled component
           onChange={event => this.setState({ term: event.target.value })} 
