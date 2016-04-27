@@ -1,9 +1,11 @@
 import React from 'react';
 
 const VideoDetail = ({video}) => {
+  //aka loading spinner to spit out html while request is ongoing
   if (!video) {
     return <div>Loading....</div>;
   }
+
   const videoId = video.id.videoId;
   // const url = 'https://www.youtube.com/embed/' + videoId; 
   const url = `https://www.youtube.com/embed/${videoId}` //same as line 5 using template string
