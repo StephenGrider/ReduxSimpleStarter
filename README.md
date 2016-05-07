@@ -23,3 +23,5 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 	> npm install
 	> npm start
 ```
+youtube API KEY
+AIzaSyADlIXwIQsuz8xxL-zGH5IdpZc75DNzl_c
