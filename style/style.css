@@ -21,3 +21,7 @@
 .list-group-item {
   background-color: #eee;
 }
+
+.title {
+  font-weight: bold;
+}

@@ -33,6 +33,7 @@ class App extends Component {
 
     return (
       <div>
+        <div className="search-bar">Noah built a YouTube Search page. Enter your search now.</div>
         <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
