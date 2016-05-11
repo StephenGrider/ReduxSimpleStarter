@@ -8,7 +8,7 @@ export default class RSVPForm extends Component {
   }
 
   render() {
-    let date = moment(this.props.eventDate).format("MMM d [@] h:mm a");
+    let date = moment(this.props.eventDate).format("MMM d [@ 7PM]"); // h:mm a
 
     return (
       <div className="container">
