@@ -5,6 +5,7 @@ import topojson from 'topojson';
 import L from 'leaflet';
 
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import RSVPForm from './map/rsvp-form';
 
 export default class OpenStreetMap extends Component {
   constructor() {
@@ -16,17 +17,19 @@ export default class OpenStreetMap extends Component {
   }
 
   render() {
-    const position = [51.505, -0.09];
+    const position = [35.5927461,-82.5564559];
     return (
       <div className="container">
-        <Map center={position} zoom={13}>
+        <Map center={position} zoom={6}
+            touchZoom={false} scrollWheelZoom={false}
+            zoomControl={false} doubleClickZoom={false}>
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            url='http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
           <Marker position={position}>
             <Popup>
-              <span>A pretty CSS3 popup.<br/>Easily customizable.</span>
+              <RSVPForm eventDate={new Date()} eventTitle="This is the title" />
             </Popup>
           </Marker>
         </Map>
