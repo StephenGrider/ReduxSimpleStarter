@@ -1,0 +1,12 @@
+.navbar-nav {
+  float: left;
+}
+
+.navbar-nav>li {
+  float: left;
+  margin-right: 5px;
+}
+
+#map1 {
+  height: 600px;
+}
