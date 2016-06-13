@@ -1,6 +1,15 @@
-# ReduxSimpleStarter
+# ReduxSimpleStarter - Updated
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Interested in learning Redux? Try Stephen Grider's [Udemy class](https://www.udemy.com/react-redux/) from which this was forked.
+
+...and then Dan Abramov's [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux) on Egghead.io.
+
+## Modifications ##
+
+This has been updated as follows:
+
+1. Added test/setup-jsdom.js to support inter-component testing. 
+1. Use valid Bootstrap CDN
 
 ###Getting Started###
 
@@ -10,7 +19,7 @@ There are two methods for getting started with this repo.
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
+	> git clone git@github.com:JESii/ReduxSimpleStarter.git
 	> cd ReduxSimpleStarter
 	> npm install
 	> npm start
