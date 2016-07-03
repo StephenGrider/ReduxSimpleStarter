@@ -1,0 +1,11 @@
+version: "2"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+    command: npm start
+    ports:
+      - "8100:8100"
