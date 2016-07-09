@@ -1,7 +1,7 @@
 {
-  "name": "redux-simple-starter",
+  "name": "redux-simple-starter-with-sass",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Simple starter package for Redux with React, Babel and Sass support",
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
@@ -9,7 +9,7 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
-  "author": "",
+  "author": "Stephen Grider, Scott Vrable",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.2.1",
