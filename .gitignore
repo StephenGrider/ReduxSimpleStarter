@@ -1,7 +1,7 @@
 /node_modules
 bundle.js
 npm-debug.log
-/style
+style.css
 
 # IntelliJ
 *.iml
