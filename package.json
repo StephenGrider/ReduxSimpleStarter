@@ -11,7 +11,7 @@
     "postinstall": "webpack -p",
     "start": "node server.js"
   },
-  "author": "Scott Vrable",
+  "author": "Stephen Grider, Scott Vrable",
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
