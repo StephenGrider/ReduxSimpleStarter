@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var autoprefixer = require("autoprefixer");
 
 module.exports = {
 	entry: [
@@ -19,7 +20,7 @@ module.exports = {
 		},
 		{
 		  test: /\.scss$/,
-		  loader: ExtractTextPlugin.extract("style-loader", "css?sourceMap!sass?sourceMap")
+		  loader: ExtractTextPlugin.extract("style-loader", "css?sourceMap!postcss-loader!sass?sourceMap")
 		}]
 	},
 	devtool: "source-map",
@@ -34,5 +35,6 @@ module.exports = {
 		new ExtractTextPlugin("./style.css", {
 			allChunks: true
 		})
-	]
+	],
+	postcss: [autoprefixer]
 };
