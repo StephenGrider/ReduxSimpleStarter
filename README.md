@@ -34,7 +34,7 @@ to
 
 ```
 	"scripts": {
-	  "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+	  "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
 	  "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
 	  "test:watch": "npm run test -- --watch",
 	  "postinstall": "webpack -p",
