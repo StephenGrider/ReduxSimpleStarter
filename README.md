@@ -10,7 +10,7 @@ Checkout this repo, install dependencies, then start the webpack process with th
 	> git clone https://github.com/scottvrable/ReduxSimpleStarter
 	> cd ReduxSimpleStarter
 	> npm install
-	> npm start
+	> npm run dev
 ```
 
 Unlike the original version of this project, this verison supports Sass (with source maps) through a overly opinioned set up. (I also did some obnoxious stuff like switching spaces to tabs and single-quotes to double-quotes.)
@@ -19,25 +19,8 @@ Each subdirectory in the `src/styles` folder (except for `lib`) contains a `_mai
 
 ## When Deploying to Heroku...
 
-In `package.json`, change
+Run...
 
 ```
-	"scripts": {
-	  "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-	  "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-	  "test:watch": "npm run test -- --watch",
-	  "postinstall": "webpack -p"
-	},
-``` 
-
-to
-
-```
-	"scripts": {
-	  "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-	  "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-	  "test:watch": "npm run test -- --watch",
-	  "postinstall": "webpack -p",
-	  "start": "node server.js"
-	},
+	> git push heroku master
 ```
