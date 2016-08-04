@@ -6,17 +6,16 @@ const VideoList = (props) => {
 	//lists were built by map, don't by forloops
 	const videoItems = props.videos.map((video) => {
 		return (
-		<VideoListItem 
+		<VideoListItem
 			onVideoSelect={props.onVideoSelect}
-			key ={video.etag} 
+			key ={video.etag}
 			video={video} />
 		);
 	});
-	
+
 	return (
 		<ul className="col-md-4" list-group>
 			 {videoItems}
-			
 		</ul>
 	);
 };

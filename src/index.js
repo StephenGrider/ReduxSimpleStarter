@@ -7,9 +7,6 @@ import SearchBar from './components/search_bar';
 import VideoDetail from './components/video_detail';
 const API_KEY = "AIzaSyDEdpuAHZtJ2GgeTdty5DB4drfx6_VycFY";
 
-
-
-
 // Create a new Component. This component should produce
 // some HTML
 
@@ -29,10 +26,10 @@ class App extends Component{
 		//CREATE for youtube-search
 		YTSearch({key: API_KEY, term: term}, (videos) => {
 			this.setState({
-				videos: videos, 
+				videos: videos,
 				selectedVideo : videos[0]
-			}); 
-			//same as this.setState({videos : videos});  
+			});
+			//same as this.setState({videos : videos});
 		});
 	}
 
@@ -40,10 +37,10 @@ class App extends Component{
 		const videoSearch = _.debounce(term =>{this.videoSearch(term)}, 300);
 
 		return (
-			<div> 
+			<div>
 				<SearchBar onSearchTermChange={videoSearch}/>
 				<VideoDetail video={this.state.selectedVideo} />
-				<VideoList 
+				<VideoList
 					onVideoSelect = {selectedVideo => this.setState({selectedVideo}) }
 					videos={this.state.videos} />
 			</div>
