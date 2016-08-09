@@ -20,8 +20,8 @@ module.exports = {
 			}
 		},
 		{
-		  test: /\.scss$/,
-		  loader: ExtractTextPlugin.extract("style-loader", "css?sourceMap!postcss-loader!sass?sourceMap")
+			test: /\.scss$/,
+			loader: ExtractTextPlugin.extract("style-loader", "css?sourceMap!postcss-loader!sass?sourceMap")
 		}]
 	},
 	devtool: "source-map",
