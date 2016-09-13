@@ -1,7 +1,6 @@
-// create/manage components
 import React, { Component } from 'react';
-// insert elements to the DOM
 import ReactDOM from 'react-dom';
+import Redux from 'redux';
 import _ from 'lodash';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
@@ -37,7 +36,7 @@ class App extends Component {
     const videoSearch = _.debounce(this.videoSearch, 300);
     return (
       <div>
-        <SearchBar onSearchTermChange={this.videoSearch} />
+        <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
@@ -47,6 +46,4 @@ class App extends Component {
   }
 }
 
-// Place it on the DOM
-// < /> creates an instance of the element
 ReactDOM.render(<App />, document.querySelector('.container'));
