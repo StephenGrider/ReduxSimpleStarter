@@ -35,6 +35,8 @@ class App extends Component {
   render() {
     const videoSearch = _.debounce(this.videoSearch, 300);
     return (
+      //how can i pass in videoSearch? why don't i need
+      //to pass in this.videoSearch?
       <div>
         <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />

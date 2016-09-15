@@ -10,7 +10,6 @@ class SearchBar extends Component {
   }
 
   render() {
-    console.log('method: ', this.props.onSearchTermChange.toString())
     return (
       <div className="search-bar">
         <input 
