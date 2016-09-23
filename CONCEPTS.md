@@ -10,7 +10,7 @@ Only the most parent component should be responsible from fetching data. E.g. Fl
 2. Each instance of class based components has its own copy of state
 3. Controlled components is kind of form element, like an input whose value is set by the state of the object and not the opposite
 
-```
+```javascript
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -31,6 +31,6 @@ class SearchBar extends Component {
 
 1. Doesn't have any state
 
-```
+```javascript
 const SearchBar = () => { render <div>Hello There!</div> };
 ```
