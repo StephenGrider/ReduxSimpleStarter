@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "babel-runtime": "^6.11.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
