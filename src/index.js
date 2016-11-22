@@ -24,6 +24,7 @@ class App extends Component {
 
 
 }
+console.log('Adding in API Work');
 
 // Take this generated HTML and put it on the page (Add to DOM)!!
 
