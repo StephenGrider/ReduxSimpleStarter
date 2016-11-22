@@ -13,3 +13,5 @@ class SearchBar extends Component {
 }
 
 export default SearchBar;
+
+console.log('changes');
