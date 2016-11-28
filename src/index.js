@@ -11,27 +11,18 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.videoSearch = this.videoSearch.bind(this);
-
     this.state = {
       products: [],
     };
 
-    // this.videoSearch('surfboards');
     this.fetchProducts();
   }
 
-  fetchProducts() {
-    const url = 'http://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js';
+  asyncRequest(url, callback) {
     const xmlHttp = new XMLHttpRequest();
-    const that = this;
     xmlHttp.onreadystatechange = function() { 
       if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
-        const objects = JSON.parse(xmlHttp.responseText);
-        objects.products.forEach(( {name, msrpInCents, mainImage, mainImage: {ref}} ) => {
-          console.log(name, msrpInCents, ref);
-          that.setState({ products: [...that.state.products, { name, cost: msrpInCents / 100, img: mainImage.ref } ] });
-        });
+        callback(xmlHttp.responseText);
       }
     }
 
@@ -39,22 +30,27 @@ class App extends Component {
     xmlHttp.send(null);
   }
 
-  videoSearch(term) {
-    YTSearch({key: API_KEY, term}, videos => {
-      this.setState({
-        videos,
-        selectedVideo: videos[0],
+  fetchProducts() {
+    const url = 'http://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js';
+    const that = this;
+
+    function loadProducts(responseText) {
+      const objects = JSON.parse(responseText);
+      objects.products.forEach(( {name, msrpInCents, mainImage, mainImage: {ref}} ) => {
+        console.log(name, msrpInCents, ref);
+        that.setState({ products: [...that.state.products, { name, cost: msrpInCents / 100, img: mainImage.ref } ] });
       });
-    });
+    }
+
+    this.asyncRequest(url, loadProducts);
   }
 
   render() {
-    // const videoSearch = _.debounce(this.videoSearch, 300);
+    console.log(this.state.products)
     return (
       <div>
         <SearchBar onSearchTermChange={ () => {} } />
-        <ProductList
-          products={this.state.products} />
+        <ProductList products={this.state.products} />
       </div>
     );
   }
