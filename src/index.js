@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Redux from 'redux';
 import _ from 'lodash';
 import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
-import VideoList from './components/video_list';
-import VideoDetail from './components/video_detail'
+import ProductList from './components/product_list';
 
 const API_KEY = 'AIzaSyCsr55vEo8jVDKmwFJ8yiDGnWA5PeuPJQU';
 
@@ -16,11 +14,29 @@ class App extends Component {
     this.videoSearch = this.videoSearch.bind(this);
 
     this.state = {
-      videos: [],
-      selectedVideo: null,
+      products: [],
     };
 
-    this.videoSearch('surfboards');
+    // this.videoSearch('surfboards');
+    this.fetchProducts();
+  }
+
+  fetchProducts() {
+    const url = 'http://sneakpeeq-sites.s3.amazonaws.com/interviews/ce/feeds/store.js';
+    const xmlHttp = new XMLHttpRequest();
+    const that = this;
+    xmlHttp.onreadystatechange = function() { 
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        const objects = JSON.parse(xmlHttp.responseText);
+        objects.products.forEach(( {name, msrpInCents, mainImage, mainImage: {ref}} ) => {
+          console.log(name, msrpInCents, ref);
+          that.setState({ products: [...that.state.products, { name, cost: msrpInCents / 100, img: mainImage.ref } ] });
+        });
+      }
+    }
+
+    xmlHttp.open("GET", url, true); // true for asynchronous 
+    xmlHttp.send(null);
   }
 
   videoSearch(term) {
@@ -33,16 +49,12 @@ class App extends Component {
   }
 
   render() {
-    const videoSearch = _.debounce(this.videoSearch, 300);
+    // const videoSearch = _.debounce(this.videoSearch, 300);
     return (
-      //how can i pass in videoSearch? why don't i need
-      //to pass in this.videoSearch?
       <div>
-        <SearchBar onSearchTermChange={videoSearch} />
-        <VideoDetail video={this.state.selectedVideo} />
-        <VideoList
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
-          videos={this.state.videos} />
+        <SearchBar onSearchTermChange={ () => {} } />
+        <ProductList
+          products={this.state.products} />
       </div>
     );
   }
