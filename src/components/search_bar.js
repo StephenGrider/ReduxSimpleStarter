@@ -12,15 +12,25 @@ import React, { Component } from 'react';
 // when we create a class component we must always create a render method and have some jsx, or else there will be an error 
 // declare event handler and pass it to the input element
 class SearchBar extends Component {
+// this is how we initialize state in a class based component
+  constructor(props) {
+    super(props);
+
+// create a new obj and assign it to this.state
+// as user types in input, update this.state to be value of what is in the input field 
+    this.state = { term: ''}
+  }
+
+// use this.setState to inform react that state is changing
   render() {
-    return <input onChange={this.onInputChange} />;
+    return (
+      <div>
+        <input 
+          value = {this.state.term}
+          onChange={event => this.setState({term: event.target.value})} />
+      </div>
+    );
   }
-
-  onInputChange(event) {
-    console.log("event.target.value", event.target.value);
-  }
-
-
 }
 
 export default SearchBar; 
