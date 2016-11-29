@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import _ from 'lodash';
-import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import ProductList from './components/product_list';
-
-const API_KEY = 'AIzaSyCsr55vEo8jVDKmwFJ8yiDGnWA5PeuPJQU';
 
 class App extends Component {
   constructor(props) {
@@ -13,6 +9,7 @@ class App extends Component {
 
     this.state = {
       products: [],
+      selectedProducts: [ {name: 'Loading...'} ],
     };
 
     this.fetchProducts();
@@ -38,19 +35,34 @@ class App extends Component {
       const objects = JSON.parse(responseText);
       objects.products.forEach(( {name, msrpInCents, mainImage, mainImage: {ref}} ) => {
         console.log(name, msrpInCents, ref);
-        that.setState({ products: [...that.state.products, { name, cost: msrpInCents / 100, img: mainImage.ref } ] });
+
+        that.setState({ products: [
+          ...that.state.products,
+          { name, cost: msrpInCents / 100, img: mainImage.ref }
+        ] });
+
+        that.handleSearch('');
       });
     }
 
     this.asyncRequest(url, loadProducts);
   }
 
+  handleSearch(searchTerm) {
+    const userSelection = this.state.products.filter(item => {
+      return JSON.stringify(item.name + item.cost)
+        .toLowerCase()
+        .includes(searchTerm);
+    }).sort((item1, item2) => item1.cost - item2.cost);
+
+    this.setState({selectedProducts: userSelection});
+  }
+
   render() {
-    console.log(this.state.products)
     return (
       <div>
-        <SearchBar onSearchTermChange={ () => {} } />
-        <ProductList products={this.state.products} />
+        <SearchBar onSearchTermChange={this.handleSearch.bind(this)} />
+        <ProductList products={this.state.selectedProducts} />
       </div>
     );
   }

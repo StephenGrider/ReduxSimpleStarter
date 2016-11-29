@@ -8,6 +8,14 @@ const ProductList = props => {
       product={product} />
   );
 
+  if(listItems.length === 0) {
+    return (
+      <ul>
+        Not found
+      </ul>
+    );
+  }
+
   return (
     <ul>
       {listItems}

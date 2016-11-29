@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductListItem = ({product}) => {
   return (
-    <li className="list-group-item">
+    <li>
       <div>
         {product.name}
       </div>
@@ -10,7 +10,7 @@ const ProductListItem = ({product}) => {
         ${product.cost}
       </div>
       <div>
-        <img className="image" src={product.img} />
+        <img src={product.img} />
       </div>
     </li>
   );
