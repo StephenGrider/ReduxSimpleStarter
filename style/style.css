@@ -1,0 +1,16 @@
+html {
+  overflow-y: scroll; 
+}
+
+.search-bar {
+  margin:20px;
+  margin-left: 40px;
+}
+
+.search-bar input {
+  width: 75%;
+}
+
+.list-group-item:hover {
+  background-color: #eee;
+}

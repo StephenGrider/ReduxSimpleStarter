@@ -1,0 +1,8 @@
+{
+  "name": "gitgraph.js",
+  "version": "1.4.0",
+  "main": [ "./build/gitgraph.js", "./build/gitgraph.css" ],
+  "ignore": [
+    "**/.*"
+  ]
+}

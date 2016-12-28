@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Index</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Index</h1>
+    
+    
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><p><img src="/assets/logo/gitgraph-logo.png" alt="gitgraph.js"></p>
+<h1><a href="http://travis-ci.org/nicoespeon/gitgraph.js"><img src="https://secure.travis-ci.org/nicoespeon/gitgraph.js.png" alt="Build Status"></a> <a href="https://david-dm.org/nicoespeon/gitgraph.js#info=devDependencies"><img src="https://david-dm.org/nicoespeon/gitgraph.js/dev-status.png" alt="devDependency Status"></a></h1>
+<p>A JavaScript library to draw pretty git graphs in the browser.</p>
+<p>Project page: <a href="http://gitgraphjs.com/">http://gitgraphjs.com/</a></p>
+<h2>How to start</h2>
+<p>You have different options to start with the library:</p>
+<ul>
+<li><a href="https://github.com/nicoespeon/gitgraph.js/releases/latest">Download the latest release</a>.</li>
+<li>Clone the repo: <code>git clone git://github.com/nicoespeon/gitgraph.js.git</code>.</li>
+<li>Install with <a href="http://bower.io/">Bower</a>: <code>bower install gitgraph.js</code>.</li>
+<li>Use <a href="https://cdnjs.com/libraries/gitgraph.js">the CDNjs hosted lib</a>.</li>
+</ul>
+<p>Production files are available under the <code>build/</code> directory.</p>
+<h2>Report a bug / Ask for a feature</h2>
+<p>You found some nasty bug or have a cool feature request? <a href="https://github.com/nicoespeon/gitgraph.js/issues">Just open a new issue</a>.</p>
+<p>Please have a look at <a href="https://github.com/necolas/issue-guidelines/blob/master/CONTRIBUTING.md">the Issue Guidelines</a> from <a href="https://github.com/necolas">Nicolas Gallagher</a> before doing so.</p>
+<h2>Documentation</h2>
+<p>The JavaScript source code is documented with <a href="http://usejsdoc.org/">JSDoc</a>.</p>
+<h2>Contributing</h2>
+<p>Editor preferences are available in <a href="https://github.com/nicoespeon/gitgraph.js/blob/master/.editorconfig">the editor config</a> for easy use in common text editors. Read more and download plugins at <a href="http://editorconfig.org">http://editorconfig.org</a>.</p>
+<p>The project uses <a href="http://gruntjs.com">Grunt</a> with convenient methods for our workflow. It's how we lint our code, run tests, generate documentation, etc. To use it, install the required dependencies as directed and then run the following Grunt commands.</p>
+<h3>Install Grunt</h3>
+<p>From the command line:</p>
+<ul>
+<li>Install <code>grunt-cli</code> globally with <code>npm install -g grunt-cli</code>.</li>
+<li>Install <a href="https://github.com/nicoespeon/gitgraph.js/blob/master/.editorconfig">the necessary local dependencies</a> with <code>npm install</code>.</li>
+</ul>
+<p>When completed, you'll be able to run the various Grunt commands provided from the command line.</p>
+<p><a href="http://gruntjs.com/getting-started">&gt; Need more information about how to get started with Grunt?</a></p>
+<h3>Available Grunt commands</h3>
+<h4>test code - <code>grunt test</code></h4>
+<p>Check source code against <a href="http://www.jshint.com/">JSHint</a> then runs unit tests with <a href="http://pivotal.github.io/jasmine/">Jasmine</a>.</p>
+<h4>generate documentation - <code>grunt doc</code></h4>
+<p>Generate source code documentation into <code>dist/docs/</code> (not versioned) with <a href="http://usejsdoc.org/">JSDoc</a>.</p>
+<h4>compile a non-versioned release - <code>grunt dist</code></h4>
+<p>Clean <code>dist/</code> directory, lint code, output the minified release into <code>dist/gitgraph.min.js</code> and generate the documentation into <code>dist/docs/</code>.</p>
+<h4>compile a new release - <code>grunt release</code></h4>
+<p>Lint code, output the source and minified releases into <code>build/</code> and generate the official documentation into <code>docs/</code>.</p>
+<h4>open a live reload server - <code>grunt server</code></h4>
+<p>For a better code experience, this grunt task opens a live server in your favorite browser. This server is automatically reloaded when you save a project file.</p>
+<p>Please note that <code>examples/index.html</code> is the default file for testing ;)</p>
+<h2>Versioning</h2>
+<p>We use <a href="http://semver.org/">SemVer</a> as a guideline for our versioning here.</p>
+<h3>What does that mean?</h3>
+<p>Releases will be numbered with the following format:</p>
+<pre><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code></pre>
+<p>And constructed with the following guidelines:</p>
+<ul>
+<li>Breaking backward compatibility bumps the <code>&lt;major&gt;</code> (and resets the <code>&lt;minor&gt;</code> and <code>&lt;patch&gt;</code>)</li>
+<li>New additions without breaking backward compatibility bumps the <code>&lt;minor&gt;</code> (and resets the <code>&lt;patch&gt;</code>)</li>
+<li>Bug fixes and misc. changes bumps the <code>&lt;patch&gt;</code></li>
+</ul>
+<h2>Authors and contributors</h2>
+<p><strong>Nicolas Carlo</strong> - <a href="https://twitter.com/nicoespeon">@nicoespeon</a> } <a href="http://nicoespeon.com">http://nicoespeon.com</a></p>
+<p><strong>Fabien Bernard</strong> - <a href="https://twitter.com/fabien0102">@fabien0102</a></p>
+<h2>Copyright and License</h2>
+<p>Copyright (c) 2013 Nicolas CARLO and Fabien BERNARD under <a href="https://github.com/nicoespeon/gitgraph.js/blob/master/LICENSE.md">the MIT license</a>.</p>
+<p><a href="http://choosealicense.com/licenses/mit/">&gt; What does that mean?</a></p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Classes</h3><ul><li><a href="Branch.html">Branch</a></li><li><a href="Commit.html">Commit</a></li><li><a href="GitGraph.html">GitGraph</a></li><li><a href="Template.html">Template</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_emitEvent">_emitEvent</a></li><li><a href="global.html#_getScale">_getScale</a></li><li><a href="global.html#_isHorizontal">_isHorizontal</a></li><li><a href="global.html#_isVertical">_isVertical</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.2.2</a> on Fri Sep 02 2016 21:24:48 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
