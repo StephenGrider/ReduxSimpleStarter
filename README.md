@@ -1,25 +1,18 @@
-# ReduxSimpleStarter
+# ReduxSimpleStarter (with Sass Support)
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This project is heavily based on the [ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter) repo by the excellent Stephen Grider of [Udemy](https://www.udemy.com/user/sgslo/) fame.
 
 ###Getting Started###
 
-There are two methods for getting started with this repo.
-
-####Familiar with Git?#####
-Checkout this repo, install dependencies, then start the gulp process with the following:
+Checkout this repo, install dependencies, then start the webpack process with the following:
 
 ```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
+	> git clone https://github.com/scottvrable/ReduxSimpleStarter
 	> cd ReduxSimpleStarter
 	> npm install
 	> npm start
 ```
 
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Unlike the original version of this project, this verison supports Sass (with source maps) through a overly opinioned set up. (I also did some obnoxious stuff like switching spaces to tabs and single-quotes to double-quotes.)
 
-```
-	> npm install
-	> npm start
-```
+Each subdirectory in the `src/styles` folder (except for `lib`) contains a `_main.scss` partial. These `_main.scss` files should import the other partials in their respective directories. Then, `style.scss` imports all the `_main.scss` files. All of this is outputted to style.css in the root directory which is what will be read by the browser in a live app.
