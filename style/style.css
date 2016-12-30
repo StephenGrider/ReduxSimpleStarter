@@ -20,3 +20,8 @@
 .list-group-item:hover {
   background-color: #eee;
 }
+.main_header {
+  width: 100%;
+  text-align: center;
+  padding-top: .5em;
+}

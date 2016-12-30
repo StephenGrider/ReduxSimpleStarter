@@ -6,7 +6,7 @@ class YoutubeHeader extends React.Component {
   }
   render() {
     return (
-      <h1>Mini Youtube</h1>
+      <h1 className="main_header">Mini YouTube</h1>
       )
   }
 }
