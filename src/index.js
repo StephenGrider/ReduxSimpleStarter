@@ -5,6 +5,7 @@ import YTSearch from 'youtube-api-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
+import YoutubeHeader from './components/mini-yt-header';
 
 const API_KEY = 'AIzaSyBs8HechEIQEcpnJLWHwNS_CYLEU5-XROA';
 
@@ -33,6 +34,7 @@ class App extends React.Component {
   render(){
     return (
     <div>
+      <YoutubeHeader />
       <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
       <VideoDetail video={this.state.selectedVideo}/>
       <VideoList
