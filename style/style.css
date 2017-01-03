@@ -1,5 +1,5 @@
 .search-bar {
-  margin: 20px;
+  margin: 2%;
   text-align: center;
 }
 .search-bar input {
@@ -10,7 +10,7 @@
 }
 .video-detail .details {
   margin-top: 10px;
-  padding: 10px;
+  padding: 1%;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -21,7 +21,7 @@
   background-color: #eee;
 }
 .main_header {
-  width: 100%;
+  width: 90%;
   text-align: center;
   padding-top: .5em;
 }
