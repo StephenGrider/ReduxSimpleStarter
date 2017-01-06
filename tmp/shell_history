@@ -1,0 +1,6 @@
+npm install -g npm-check-updates
+exit
+ncu
+npm install -g npm-check-updates
+ncu -u
+exit
