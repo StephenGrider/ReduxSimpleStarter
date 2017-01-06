@@ -5,3 +5,9 @@ npm-debug.log
 # IntelliJ
 *.iml
 /.idea
+
+#Based on reactjs/react-redux gitignore
+.DS_Store
+dist
+lib
+coverage
