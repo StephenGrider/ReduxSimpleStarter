@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 class Searchbar extends Component {
     constructor( props )
     {
-        super(props);
+        super( props );
 
-        this.state = { term: '' };
+        this.state = { term : '' };
     }
 
-    render(){
+    render()
+    {
         return (
             <div>
-                <input onChange={ event => this.setState({ term: event.target.value }) } />
+                <input onChange={ event => this.setState( { term : event.target.value } ) } />
                 {this.state.term}
             </div>
         );
