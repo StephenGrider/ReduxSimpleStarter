@@ -8,7 +8,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>Boilerplate Code for modern webapps with react, redux, Webpack</h1>
+        <h1>Boilerplate Code for modern webapps with React, Redux, Webpack</h1>
         <h3>Features : </h3>
         <ul>
           <li>Webpack HMR support.</li>
