@@ -45,7 +45,7 @@ Why do you want to set and track state?
 class SearchBar extends Component {
 	constructor(props) {
 		super(props);
-
+		this.placeholder = {placeholder: 'search for YouTube videos!'}
 		this.state = {term: ''};
 	}
 
@@ -65,8 +65,11 @@ class SearchBar extends Component {
 			<div>
 				<input
 				// by using this controlled element, I do not render from my input, I update the state and the state is rendered, when it recieves input. If I do not set state with a controlled form, input would not be accepted; it needs the state update to render!
-					value = { this.state.term} 
+				// I am telling react to take input from state. Input goes to state, and state renders view.
+					value = { this.state.term}
+					placeholder = {this.placeholder.placeholder} 
 					onChange={event => this.setState({term: event.target.value})} />
+					{this.state.term}
 			</div>
 		);
 	}
