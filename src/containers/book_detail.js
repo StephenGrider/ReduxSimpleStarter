@@ -8,7 +8,7 @@ class BookDetail extends Component {
 		}
 
 		return (
-			<div>
+			<div className="">
 				<h3>Details for:</h3>
 				<div>{this.props.book.title}</div>
 				<div>Pages: {this.props.book.pages}</div>
@@ -19,7 +19,7 @@ class BookDetail extends Component {
 
 function mapStateToProps(state){
 	return{
-		book: state.ActiveBook
+		book: state.activeBook
 	};
 }
 
