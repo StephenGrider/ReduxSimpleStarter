@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-//The top Title Bar
-class TitleBar extends Component{
-  render(){
-    return (
-      <div className="center title bottomPadding">
-        Harry Potter Quiz
-      </div>
-    );
-  }
+/* The Title Bar for the top of the App
+*     1. only returns JSX (for now)
+*/
+const TitleBar = (props) => {
+  return (
+    <div className="center title bottom-padding jumbotron text-center">
+      Who Said What?
+    </div>
+  );
 }
 
-export default TitleBar
+export default TitleBar;

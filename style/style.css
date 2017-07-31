@@ -4,13 +4,26 @@
 
 .title {
   font-size: 200%;
-  font-family:  "arial";
+  font-family: "arial";
 }
 
 .right-buffer {
   float: right;
 }
 
-.bottomPadding {
-  padding-bottom: 1em;
+.bottom-padding {
+  padding-bottom: 1.5em;
+}
+
+.btn-space {
+    margin-right: 5px;
+}
+
+.h4 {
+  font-family: Georgia;
+}
+
+.has-error {
+  font-weight: bold;
+  color: red;
 }
