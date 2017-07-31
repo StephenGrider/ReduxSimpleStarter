@@ -21,7 +21,7 @@ class QuestionArea extends Component {
 
     for(var i = 0; i < this.props.questions.length; i++){
         if(this.props.questions[i].name === key){
-          answer = this.props.questions[i].answer;
+          answer = this.props.questions[i].correct_answer;
         }
       }
 
