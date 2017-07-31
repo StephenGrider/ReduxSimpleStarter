@@ -1,0 +1,7 @@
+var data = [
+	{"id":0, "question": "Who is the headmaster of Hogwarts?", "answer": "Albus Dumbledore"},
+	{"id":1, "question": "What is the full name of the hogwarts defense against the dark arts teacher was a warewolf?", "answer": "Remus Lupin"},
+	{"id":2, "question": "What was the name of Ron's rat?", "answer": "Scabbers"},
+	{"id":3, "question": "What was the first name of Harry Potter's mother?", "answer": "Lily"}
+]
+export default data;

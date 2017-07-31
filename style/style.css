@@ -1,0 +1,16 @@
+.center {
+  text-align: center;
+}
+
+.title {
+  font-size: 200%;
+  font-family:  "arial";
+}
+
+.right-buffer {
+  float: right;
+}
+
+.bottomPadding {
+  padding-bottom: 1em;
+}
