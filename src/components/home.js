@@ -9,30 +9,34 @@ import { Link } from 'react-router-dom';
 */
 export default class Home extends Component {
   render() {
-    const linkClassName = "btn btn-info btn-space";
+    const linkClassName = "btn btn-info btn-space padding-left";
     const rowClassName = "row bottom-padding";
 
     return (
       <div>
-        <TitleBar />
-          <div className="container">
+        <div>
+          <TitleBar />
+        </div>
+        <div>
+          <div className={rowClassName}>
+            <div className="legend-title">Movies </div>
+            <div className="top-padding" />
+            <Link className={linkClassName} to="/quizharrypotter"> Harry Potter (1-7) Quiz </Link>
+            <Link className={linkClassName}  to="/quizwizardofoz"> Wizard of Oz </Link>
+          </div>
+          <div className={rowClassName}>
+            <div className="legend-title">Books </div>
+            <div className="top-padding" />
+            <Link className={linkClassName}  to="/quizperks"> The Perks of Being a Wallflower </Link>
+            <Link className={linkClassName}  to="/quizthecircle"> The Circle </Link>
+          </div>
             <div className={rowClassName}>
-              <h4>
-                Movies
-              </h4>
-              <Link className={linkClassName} to="/quizhp"> Harry Potter (1-7) Quiz </Link>
-              <Link className={linkClassName}  to="/quizabouttime"> About Time </Link>
-            </div>
-            <div className={rowClassName}>
-              <h4> Books </h4>
-              <Link className={linkClassName}  to="/quizperks"> The Perks of Being a Wallflower </Link>
-              <Link className={linkClassName}  to="/quizthecircle"> The Circle </Link>
-            </div>
-            <div className={rowClassName}>
-              <h4> TV Shows </h4>
+              <div className="legend-title">TV Shows </div>
+              <div className="top-padding" />
               <Link className={linkClassName}  to="/quizlost"> Lost </Link>
               <Link className={linkClassName}  to="/quizfriends"> Friends </Link>
               <Link className={linkClassName}  to="/quizarresteddevelopment"> Arrested Development </Link>
+              <Link className={linkClassName} to="/quiztheoffice"> The Office </Link>
             </div>
           </div>
       </div>

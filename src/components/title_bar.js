@@ -5,8 +5,11 @@ import React from 'react';
 */
 const TitleBar = (props) => {
   return (
-    <div className="center title bottom-padding jumbotron text-center">
-      Who Said What?
+    <div className="jumbotron center">
+      <div className="title">
+        Who Said What?
+      </div>
+      <p>A game where you guess who said that particular quote for books, movies, & tv shows</p>
     </div>
   );
 }

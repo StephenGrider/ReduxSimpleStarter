@@ -5,6 +5,8 @@
 .title {
   font-size: 200%;
   font-family: "arial";
+  color: black;
+  font-weight: bold;
 }
 
 .right-buffer {
@@ -13,6 +15,14 @@
 
 .bottom-padding {
   padding-bottom: 1.5em;
+}
+
+.top-padding {
+  padding-top: 1em;
+}
+
+.bottom-padding-radio {
+  padding-bottom: 1em;
 }
 
 .btn-space {
@@ -26,4 +36,9 @@
 .has-error {
   font-weight: bold;
   color: red;
+}
+
+.legend-title {
+  font-size: 1.5em;
+  font-weight: bold;
 }

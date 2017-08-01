@@ -4,8 +4,11 @@ import { fetchQuestions } from '../actions';
 import { bindActionCreators } from 'redux';
 import { Field, reduxForm, SubmissionError } from 'redux-form';
 import { Link } from 'react-router-dom';
+import Question from '../components/question';
 
-/* The Specific Question Area for each question */
+/*
+*     The Specific Question Area for each question
+*/
 class QuestionArea extends Component {
   constructor(props){
     super(props);
@@ -16,16 +19,14 @@ class QuestionArea extends Component {
     var incorrectAnswers = 0;
     var answer = "";
 
-    //values is an object, so must use object.keyys
+    //values is an object, so must use object.keys
     Object.keys(values).map((key) => {
-
-    for(var i = 0; i < this.props.questions.length; i++){
+      for(var i = 0; i < this.props.questions.length; i++){
         if(this.props.questions[i].name === key){
           answer = this.props.questions[i].correct_answer;
         }
       }
-
-      if(values[key].toLowerCase() != answer.toLowerCase()){
+      if(values[key] != answer){
         incorrectAnswers++;
       }
     });
@@ -37,24 +38,19 @@ class QuestionArea extends Component {
      }
   }
 
-  //Render the question and the text box if part of this quiz.
+  //Render the question and the text box in part of this quiz.
   renderQuestion(question){
+      var buttonValue =  "";
+      if(question.name.includes(4)){
+          buttonValue = "Submit";
+      }else{
+          buttonValue = "Next";
+      }
+
       return(
-        <li key={question.id}>
-          <div>
-            <label>{question.question}</label>
-              <div>
-                <Field
-                name={question.name}
-                component="input"
-                type="input"
-                className="form-control"
-                required
-                />
-              </div>
-            </div>
-          <div className="bottom-padding" />
-        </li>
+        <div key={question.name}>
+          <Question question={question} />
+        </div>
       );
   }
 
@@ -75,29 +71,27 @@ class QuestionArea extends Component {
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
           <fieldset>
             <legend className="center title bottom-padding jumbotron text-center"> {legendTitle} </legend>
-            <ol>
               {questions.map(this.renderQuestion)}
-            </ol>
             <div className="has-error center">
               {error}
             </div>
-              <div>
-                <button
-                className="btn btn-primary right-buffer"
-                disabled={submitting}
-                type="submit">
-                  Submit
-                </button>
-              </div>
-              <div>
-                <Link
-                className="btn btn-danger right-buffer btn-space"
-                type="cancel"
-                to="/"
-                >
-                  Go Back
-                </Link>
-              </div>
+            <div>
+               <button
+               className="btn btn-primary right-buffer"
+               disabled={submitting}
+               type="submit">
+                 Submit
+               </button>
+             </div>
+             <div>
+               <Link
+               className="btn btn-danger right-buffer btn-space"
+               type="cancel"
+               to="/"
+               >
+                 Go Back
+               </Link>
+             </div>
           </fieldset>
         </form>
       </div>
@@ -105,22 +99,24 @@ class QuestionArea extends Component {
   }
 }
 
-// return the legend title id
+// return the legend title id (somehow make this better)
 function getTitle(quizId){
-  if(quizId === "hp"){
-    return "Harry Potter (1-7) Quiz";
+  if(quizId === "harrypotter"){
+    return "Harry Potter (1-7)";
   }else if(quizId === "thecircle"){
-    return "The Circle Quiz";
+    return "The Circle";
   }else if(quizId === "friends"){
-    return "Friends Quiz";
-  }else if(quizId === "abouttime"){
-    return "About Time Quiz";
+    return "Friends";
+  }else if(quizId === "wizardofoz"){
+    return "Wizard of Oz";
   }else if(quizId  === "lost"){
-    return "Lost Quiz";
+    return "Lost";
   }else if(quizId  === "arresteddevelopment"){
-    return "Arrested Development Quiz";
+    return "Arrested Development";
+  }else if(quizId  === "theoffice"){
+    return "The Office";
   }else{
-    return  "Perks of Being a Wallflower Quiz";
+    return "Perks of Being a Wallflower";
   }
 }
 
@@ -135,11 +131,12 @@ function mapDispatchToProps(dispatch){
   return bindActionCreators({ fetchQuestions }, dispatch);
 }
 
+///work on submit success -> redirect to results page
 export default reduxForm({
   form: 'QuizForm',
   onSubmitSuccess: () => {
-      alert("YOU GOT A 100");
-      history.back();
+      console.log("you recieved a 100");
+      alert("YOU RECEIVED A 100");
   }
 })(
 connect(mapStateToProps, mapDispatchToProps ) (QuestionArea)

@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from './components/home';
 import Results from './components/results';
-import QuestionArea from './container/question_area';
+import QuestionArea from './container/question_list';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
