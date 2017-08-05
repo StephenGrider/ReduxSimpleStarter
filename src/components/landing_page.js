@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 *   1. contains the main title bar
 *   2. contains the links to each of the quizzes
 */
-export default class Home extends Component {
+export default class LandingPage extends Component {
   render() {
     const linkClassName = "btn btn-info btn-space padding-left";
     const rowClassName = "row bottom-padding";

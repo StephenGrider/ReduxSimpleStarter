@@ -4,10 +4,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Home from './components/home';
+import LandingPage from './components/landing_page';
 import Results from './components/results';
 import QuestionArea from './container/question_list';
 import reducers from './reducers';
+import HomePage from './container/home_page';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
@@ -18,7 +19,8 @@ ReactDOM.render(
         <Switch>
           <Route path="/quiz:id" component={QuestionArea} />
           <Route path="/results" component={Results} />
-          <Route path="/" component={Home} />
+          <Route path="/home" component={LandingPage} />
+          <Route path="/" component={HomePage} />
         </Switch>
       </div>
     </BrowserRouter>

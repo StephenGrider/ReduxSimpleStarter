@@ -87,7 +87,7 @@ class QuestionArea extends Component {
                <Link
                className="btn btn-danger right-buffer btn-space"
                type="cancel"
-               to="/"
+               to="/home"
                >
                  Go Back
                </Link>

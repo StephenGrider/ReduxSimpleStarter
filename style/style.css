@@ -9,6 +9,13 @@
   font-weight: bold;
 }
 
+.small-title {
+  font-size: 200%
+  color: black;
+  font-weight: bold;
+  font-family: "arial";
+}
+
 .right-buffer {
   float: right;
 }
@@ -27,6 +34,10 @@
 
 .btn-space {
     margin-right: 5px;
+}
+
+.left-btn-space {
+  margin-left: 5px;
 }
 
 .h4 {
