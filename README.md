@@ -6,6 +6,7 @@
 > npm install
 > npm install --save redux-form
 > npm install --save react-router-dom
+> npm install --save axios
 > npm start
 ```
 
