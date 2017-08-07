@@ -11,6 +11,9 @@ import { browserHistory } from 'react-router';
 *     The Home Page that contains the login
 */
 class HomePage extends Component {
+  constructor(props){
+    super(props);
+  }
   //get the list of static users when mounted
   componentWillMount(){
     this.props.fetchUsers();
@@ -21,9 +24,9 @@ class HomePage extends Component {
     var isCorrect = false;
 
     this.props.users.map( user => {
-      if(user.username.toLowerCase() === values.username.toLowerCase()){
-          console.log("correct username");
+      if(user.name.toLowerCase() === values.username.toLowerCase()){
           isCorrect = true;
+          console.log("user id", user.id);
       }
     });
 

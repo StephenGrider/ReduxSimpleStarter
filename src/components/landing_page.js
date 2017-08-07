@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import TitleBar from './title_bar';
 import { Link } from 'react-router-dom';
 import HeaderBar from '../containers/header_bar';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 /**
 * The Home page for the app
 *   1. contains the main title bar
 *   2. contains the links to each of the quizzes
 */
-export default class LandingPage extends Component {
+class LandingPage extends Component {
   render() {
     const linkClassName = "btn btn-info btn-space padding-left";
     const rowClassName = "row bottom-padding";
@@ -47,3 +49,12 @@ export default class LandingPage extends Component {
     );
   }
 }
+
+/*function mapStateToProps(state, ownProps){
+  return{
+    user: state.users[ownProps.match.params.id]
+  }
+}*/
+
+//export default connect(mapStateToProps, actions)(LandingPage)
+export default LandingPage

@@ -14,11 +14,18 @@ export function fetchQuestions(){
 //fetch all the users via axios
 export function fetchUsers(){
   //whenever makes a get requeset returns a promise
-  const request = axios.get('http://jsonplaceholder.typicode.com/users');
+  const request = axios.get('http://hp-api.herokuapp.com/api/characters');
 
   //want request to be resolved before sent to reducers so use middleware
   return {
     type: FETCH_USERS,
     payload: request
+  };
+}
+
+export function activeUser(user){
+  return {
+    type: 'USER_SELECTED',
+    payload: user
   };
 }
