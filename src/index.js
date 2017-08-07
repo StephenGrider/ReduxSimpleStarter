@@ -6,11 +6,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import LandingPage from './components/landing_page';
 import Results from './components/results';
-import QuestionArea from './container/question_list';
+import QuestionArea from './containers/question_list';
 import reducers from './reducers';
-import HomePage from './container/home_page';
+import HomePage from './containers/home_page';
+import Async from './middlewares/async';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(Async)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>

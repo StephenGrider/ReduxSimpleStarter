@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TitleBar from './title_bar';
 import { Link } from 'react-router-dom';
+import HeaderBar from '../containers/header_bar';
 
 /**
 * The Home page for the app
@@ -14,6 +15,9 @@ export default class LandingPage extends Component {
 
     return (
       <div>
+        <nav className="navbar navbar-default">
+          <HeaderBar />
+        </nav>
         <div>
           <TitleBar />
         </div>

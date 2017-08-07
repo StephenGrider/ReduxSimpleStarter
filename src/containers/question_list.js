@@ -10,10 +10,6 @@ import Question from '../components/question';
 *     The Specific Question Area for each question
 */
 class QuestionArea extends Component {
-  constructor(props){
-    super(props);
-  }
-
   //right now onSubmit just counts the number of incorrect answers
   onSubmit(values){
     var incorrectAnswers = 0;
