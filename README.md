@@ -1,6 +1,7 @@
 # ReduxSimpleStarter
 
 Master: [![Build Status](https://travis-ci.org/Tesin/ReduxSimpleStarter.svg?branch=master)](https://travis-ci.org/Tesin/ReduxSimpleStarter)
+
 Develop: [![Build Status](https://travis-ci.org/Tesin/ReduxSimpleStarter.svg?branch=develop)](https://travis-ci.org/Tesin/ReduxSimpleStarter)
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
