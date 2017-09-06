@@ -10,14 +10,13 @@ import React, { Component } from 'react';
 // React class component
 class SearchBar extends Component {
   render() {
-    return (
-      <div>
-        <p>enter search:</p>
-        <input />
-      </div>
-      );
+    return <input onChange={ event => console.log(event.target.value)} />;
   }
 
+  // refactor input to ES6 syntax
+  // onInputChange(event) {
+  //   console.log(event.target.value);
+  // }
 
 };
 
