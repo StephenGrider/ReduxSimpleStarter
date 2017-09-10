@@ -10,7 +10,7 @@
     "test:watch": "npm run test -- --watch"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
