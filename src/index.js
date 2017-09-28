@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const 	API_KEY = 'AIzaSyDavNZWlHpZkkzLNpSWSn9rqwzIlQjgdyY' 
+const 	API_KEY = 'AIzaSyDavNZWlHpZkkzLNpSWSn9rqwzIlQjgdyY';
+
 
 // create a new component. this component should produce 
 // some html
