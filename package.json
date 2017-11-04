@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/StephenGrider/ReduxSimpleStarter.git"
+  },
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
@@ -12,26 +15,33 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.2.1",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
-    "jquery": "^2.2.1",
-    "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
-    "react-addons-test-utils": "^0.14.7",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "jquery": "^2.2.4",
+    "jsdom": "^8.5.0",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^0.14.8",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
-    "babel-preset-stage-1": "^6.1.18",
+    "babel-preset-stage-1": "^6.24.1",
     "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-redux": "4.3.0",
-    "react-router": "^2.0.1",
-    "redux": "^3.0.4"
+    "react": "^0.14.9",
+    "react-dom": "^0.14.9",
+    "react-redux": "^4.3.0",
+    "react-router": "^2.8.1",
+    "redux": "^3.7.2"
+  },
+  "bugs": {
+    "url": "https://github.com/StephenGrider/ReduxSimpleStarter/issues"
+  },
+  "homepage": "https://github.com/StephenGrider/ReduxSimpleStarter#readme",
+  "directories": {
+    "test": "test"
   }
 }
