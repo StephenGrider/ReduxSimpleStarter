@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { KEY } from '../src/Dev_secret.js'
 
+// const KEY = '1234'
 //Create a new component.  This component should produce some HTML.
 
 const App = () => {
   return(
-    <div>Hi!</div>
+    <div>Hi! {KEY} </div>
   )
 }
 
