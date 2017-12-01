@@ -1,7 +1,6 @@
-import React from 'react';
-//turn functional component into class component
+import React, { Component } from 'react';
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
   render() {
     return (
       <input />
