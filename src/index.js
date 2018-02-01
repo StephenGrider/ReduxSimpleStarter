@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { YOUTUBE_API_KEY } from './config.js';
-
+import YouTube from './config.js';
+import YTSearch from 'youtube-api-search';
 import SearchBar from './components/SearchBar.js'
+
+YTSearch({ key: YouTube.API_KEY, term: 'sixers' }, data => {
+  console.log(data);
+})
 
 const App = () => {
   return (
