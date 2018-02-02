@@ -14,7 +14,7 @@ class App extends Component {
       videos: []
     }
     
-    YTSearch({ key: YOUTUBE.API_KEY, query: 'sixers' }, (videos) => {
+    YTSearch({ key: YOUTUBE.API_KEY, query: 'basketball' }, (videos) => {
       this.setState({ videos });
     })
   }
