@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import _ from 'lodash';
 import YOUTUBE from './config.js';
 import SearchBar from './components/SearchBar.js';
-import VideoList from './components/VideoList.js'
-import VideoPlayer from './components/VideoPlayer.js'
+import VideoList from './components/VideoList.js';
+import VideoPlayer from './components/VideoPlayer.js';
 
 class App extends Component {
   constructor(props) {
@@ -28,9 +29,11 @@ class App extends Component {
   }
 
   render() {
+    const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+
     return (
       <div>
-        <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+        <SearchBar onSearchTermChange={videoSearch} />
         <VideoPlayer video={this.state.selectedVideo} />
         <VideoList
           onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
