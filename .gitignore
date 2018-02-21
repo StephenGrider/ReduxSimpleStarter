@@ -3,6 +3,9 @@ bundle.js
 npm-debug.log
 .DS_Store
 
+# Webpack build
+/dist
+
 # IntelliJ
 *.iml
 /.idea
