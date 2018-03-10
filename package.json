@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -32,11 +33,13 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "gh-pages": "~1.1.0",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
+    "react-scripts": "~1.1.1",
     "redux": "^3.0.4",
     "youtube-api-search": "0.0.5"
   }
