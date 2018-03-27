@@ -16,7 +16,7 @@ Checkout this repo, install dependencies, then:
 
 ```
 > git clone https://github.com/andresn/ReduxSimpleStarterRefreshed.git
-> cd ReduxSimpleStarter
+> cd ReduxSimpleStarterRefreshed
 > yarn install
 > yarn start
 ```
