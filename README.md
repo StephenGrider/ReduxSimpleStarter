@@ -1,7 +1,10 @@
 # ReduxSimpleStarterRefreshed
 
 This fork contains the following updates as of 3/27/2018:
+- Upgraded to React 16.
+- Upgraded to React-Redux 5.
 - Upgraded to Webpack 4.
+- Changed babel preset to 'env': https://www.npmjs.com/package/babel-preset-env 
 - Moved from using Mocha/Chai to Jest/Enzyme.
 - Package control using Yarn instead of NPM.
 
