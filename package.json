@@ -6,12 +6,16 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --mode development --open",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test": "jest",
     "test:watch": "npm run test -- --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "prettier": "^1.11.1",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1"
