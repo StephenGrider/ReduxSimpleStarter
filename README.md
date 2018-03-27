@@ -15,14 +15,14 @@ There are two methods for getting started with this repo.
 Checkout this repo, install dependencies, then:
 
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
+> git clone https://github.com/andresn/ReduxSimpleStarterRefreshed.git
 > cd ReduxSimpleStarter
 > yarn install
 > yarn start
 ```
 
 #### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Click [here](https://github.com/andresn/ReduxSimpleStarterRefreshedr/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
 > yarn install
