@@ -7,6 +7,7 @@ This fork contains the following updates as of 3/27/2018:
 - Changed babel preset to 'env': https://www.npmjs.com/package/babel-preset-env 
 - Moved from using Mocha/Chai to Jest/Enzyme.
 - Package control using Yarn instead of NPM.
+- Added support for JS object rest spread (... destructuring) and class properties.
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
