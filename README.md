@@ -1,6 +1,6 @@
 # ReduxSimpleStarterRefreshed
 
-This fork contains the following updates as of 3/27/2018:
+This fork contains the following updates as of 3/28/2018:
 - Upgraded to React 16.
 - Upgraded to React-Redux 5.
 - Upgraded to Webpack 4.
