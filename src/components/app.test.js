@@ -1,19 +1,36 @@
 import React from 'react';
+import {
+    mountComponentWithRedux
+} from '../../test_helper';
 import App from './app';
-import { shallow } from 'enzyme';
+
 
 describe(
-    'App',
+    'Components::App',
     () => {
-        it(
-            'renders correctly',
+        let component;
+        beforeEach(
             () => {
-                // `yarn test`, or `yarn test:watch` to run
-                // More examples here:
-                // https://github.com/vjwilson/enzyme-example-jest/blob/master/src/__tests__/Foo-test.js
-                expect(
-                    shallow(<App />).contains(<div>Redux Simple Starter</div>)
-                ).toBe(true);
+                component = mountComponentWithRedux(App);
+            }
+        );
+        it(
+            'renders',
+            () => {
+                expect(component.exists()).toBe(true);
+            }
+        );
+        it(
+            'renders button',
+            () => {
+                expect(component.find('.get-started').exists()).toBe(true);
+            }
+        );
+        it(
+            'button is clickable',
+            () => {
+                component.find('.get-started').simulate('click');
+                expect(component.find('.get-started').text()).toEqual('Started!');
             }
         );
     }
