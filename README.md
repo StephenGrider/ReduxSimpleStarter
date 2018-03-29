@@ -5,7 +5,7 @@ This fork contains the following updates as of 3/28/2018:
 - Upgraded to React-Redux 5.
 - Upgraded to Webpack 4.
 - Changed babel preset to 'env': https://www.npmjs.com/package/babel-preset-env 
-- Moved from using Mocha/Chai to Jest/Enzyme.
+- Moved from using Mocha/Chai to Jest/Enzyme. Demo test is within src/components/.
 - Package control using Yarn instead of NPM.
 - Added support for JS object rest spread (...destructuring) and class properties.
 
