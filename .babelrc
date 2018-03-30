@@ -1,3 +1,13 @@
 {
-  "presets": ["react", "es2015", "stage-1"]
+  "presets": ["react", "env"],
+  "plugins": [
+    [
+        // See: https://github.com/babel/babel-preset-env/issues/49
+        "transform-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+    ],
+    "transform-class-properties"
+  ]
 }

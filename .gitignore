@@ -2,7 +2,5 @@
 bundle.js
 npm-debug.log
 .DS_Store
+*.sublime*
 
-# IntelliJ
-*.iml
-/.idea
