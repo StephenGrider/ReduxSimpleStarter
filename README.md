@@ -1,25 +1,12 @@
-# ReduxSimpleStarter
+React-Redux Weather Web App
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+This web app is used to display acccurate weather information based on user's input for five days
 
-### Getting Started
+This app uses OpenWeatherApi to retrieve the weather information for 5 days
 
-There are two methods for getting started with this repo.
+This app uses axios for asynchronous network calls
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+Redux promise is used as a middleware to promise the network request.
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+SET-UP:
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
