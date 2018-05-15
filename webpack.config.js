@@ -1,7 +1,5 @@
 module.exports = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: ['./src/index.js'],
   output: {
     path: __dirname,
     publicPath: '/',
@@ -21,6 +19,10 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: './',
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
   }
 };
