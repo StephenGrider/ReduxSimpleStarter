@@ -16,7 +16,7 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
-    "webpack": "^1.12.9",
+    "webpack": "^1.15.0",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
