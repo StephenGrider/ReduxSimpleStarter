@@ -16,15 +16,18 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
+    "react-dom": "^16.4.1",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "loadash": "^1.0.0",
     "lodash": "^3.10.1",
     "react": "16.3.2",
-    "react-dom": "16.3.2",
+    "react-bubble": "^1.0.5",
     "react-redux": "5.0.7",
-    "redux": "4.0.0"
+    "redux": "4.0.0",
+    "youtube-api-search": "0.0.5"
   }
 }
