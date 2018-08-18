@@ -24,3 +24,8 @@
 .list-group-item:hover {
     background-color: #eee;
 }
+
+.video-frame {
+    width: 700px;
+    height: 600px;
+}
