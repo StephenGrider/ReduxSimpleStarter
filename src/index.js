@@ -49,6 +49,7 @@ class App extends Component {
         //debounce takes the function and it returns a new function that can only be called once every 300 milliseconds. 
         return (
             <div>
+                <h1 className = 'page-title'>Jonathan's Video App</h1>
               <SearchBar onSearchTermChange = {videoSearch}/>
               <VideoDetail video={this.state.selectedVideo} />
               <VideoList 

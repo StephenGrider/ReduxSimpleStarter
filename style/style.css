@@ -28,5 +28,16 @@
 .video-frame {
     width: 700px;
     height: 600px;
-    max-width: 100%;
+    max-width: 100%; 
+}
+#video-playback {
+    padding-bottom: 0; 
+}
+
+.page-title {
+    color: blue;
+    text-align: center;
+}
+#video-container {
+    padding-bottom: 0;
 }
