@@ -28,4 +28,5 @@
 .video-frame {
     width: 700px;
     height: 600px;
+    max-width: 100%;
 }
