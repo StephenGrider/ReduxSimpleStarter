@@ -13,7 +13,7 @@ class PostIndex extends Component {
     renderPosts() {
         return _.map(this.props.posts, post => {
             return (
-                <li className="list-group-item" key={post.id}>
+                <li className="list-group-item" key={`post_${post.id}`}>
                     <Link to={`/posts/${post.id}`}>{post.title}</Link>
                 </li>
             );
@@ -21,6 +21,7 @@ class PostIndex extends Component {
     }
 
     render() {
+        const isLoading = _.isEmpty(this.props.posts);
         return (
             <div>
                 <div className="text-xs-right">
@@ -30,7 +31,7 @@ class PostIndex extends Component {
                 </div>
                 <h3>Posts</h3>
                 <ul className="list-group">
-                    {this.renderPosts()}
+                    {!isLoading ? this.renderPosts() : (<div>Loading...</div>)}
                 </ul>
             </div>
         );

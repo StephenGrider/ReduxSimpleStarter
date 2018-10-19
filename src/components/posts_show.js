@@ -23,6 +23,7 @@ class PostsShow extends Component {
                     this.props.history.push('/');
                 },
                 errorCallBack: () => {
+                    //TODO
                     console.log("Error deleting Post:", id)
                 }
             });
