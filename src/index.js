@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const API_KEY = 'AIzaSyCgpmgwIjb9S6vWjLy-jV2Ep9eYpFR7byk'
+
 const App = () => {
   return <div>Hello World from kkatia</div>
 };
