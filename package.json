@@ -21,6 +21,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "@material-ui/core": "^3.3.2",
     "axios": "^0.18.0",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",

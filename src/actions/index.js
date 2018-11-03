@@ -14,25 +14,6 @@ export let endPatientSearch = (patientsArray) => {
     patientsArray
   }
 }
-
-// fetches data from api
-// export let fetchPatient = () => {
-//   let url = "https://api.github.com/search/users?q=language:javascript+location:lagos&sort=repositories&order=desc"
-//   return (dispatch) => {
-//     // tells state to be on standby to receive data
-//     dispatch(startPatientSearch())
-//     return axios.get(url).then(
-//       (response) => {
-//         // when data is received, tells endPatientSearch to update state
-//         let patientsArr = response.data.items.slice(0, 10)
-//         dispatch(endPatientSearch(patientsArr))
-//       },
-//       (err) => {
-//         console.log(err);
-//       }
-//     )
-//   }
-// }
 export let fetchPatient = () => {
   let url = "http://localhost:3000/patients"
   return (dispatch) => {

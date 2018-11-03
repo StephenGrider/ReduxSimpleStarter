@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Card from './Card/Card';
 let actions = require('../actions/index');
 
 export class App extends Component {
@@ -17,9 +18,14 @@ export class App extends Component {
         <div>
           <div className="">
             { patients.patientsArray.map((patient) =>
-              <li key={ patient.id }>
-                { patient.attributes.firstName } { patient.attributes.lastName }
-              </li>)
+              <Card
+                address={ patient.attributes.address }
+                avatarUrl={ patient.attributes.avatarUrl }
+                dob={ patient.attributes.dateOfBirth }
+                key={ patient.attributes.firstName }
+                firstName={ patient.attributes.firstName }
+                lastName={ patient.attributes.lastName }
+              />)
             }
           </div>
         </div>
