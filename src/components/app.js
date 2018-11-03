@@ -15,7 +15,7 @@ export class App extends Component {
     } else if (patients.isFetching == false && patients.patientsArray.length >=1) {
       return (
         <div>
-          <div className="dev-list">
+          <div className="">
             { patients.patientsArray.map((patient) =>
               <li key={ patient.id }>
                 { patient.attributes.firstName } { patient.attributes.lastName }
