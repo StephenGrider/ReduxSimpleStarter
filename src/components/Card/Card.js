@@ -42,8 +42,13 @@ function MediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Patient details
+        <Button
+          color="primary"
+          size="small"
+          onClick={ () => {
+            console.log('onClick');
+          }}>
+            Patient details
         </Button>
       </CardActions>
     </Card>
