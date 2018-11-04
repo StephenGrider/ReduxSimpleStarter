@@ -1,8 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import Card from '../Card/Card';
-import CardActions from '@material-ui/core/CardActions';
-import Button from '@material-ui/core/Button';
+
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import { setCurrentPatient, getPatientProfile } from '../../actions/patientAction'
 
 const PatientList = ({ patients, setPatient }) =>
@@ -12,22 +18,31 @@ const PatientList = ({ patients, setPatient }) =>
     { patients.patientsArray.map((patient, i) =>
         <div key = { patient.lastName }>
             <Card
-                address={ patient.attributes.address }
                 avatarUrl={ patient.attributes.avatarUrl }
                 dob={ patient.attributes.dateOfBirth }
                 key={ patient.id }
                 firstName={ patient.attributes.firstName }
                 lastName={ patient.attributes.lastName }>
-                <CardActions>
-                    <Button
-                        color="primary"
-                        size="small"
-                        onClick={ setPatient(i + 1)}
-                        key = { patient.attributes.firstName }
-                        >
-                            Patient details
-                    </Button>
-                </CardActions>
+                <ExpansionPanel>
+                <ExpansionPanelSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    onClick={ setPatient(i+1) }>
+                    <Typography>
+                        PATIENT DETAILS
+                    </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography>
+                            <p>Address: { patient.attributes.address }</p>
+                            <br/>
+                            <p>Room number: { patient.attributes.roomNumber }</p>
+                            <br />
+                            <p>Bed number: { patient.attributes.bedNumber }</p>
+                            <br />
+                            <p>Last updated: { patient.attributes.updatedAt.slice(0, 10) }</p>
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             </Card>
         </div>
         )
