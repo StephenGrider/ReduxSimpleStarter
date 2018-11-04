@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const PatientProfile = ({ profile }) =>
   <div>
     <h1>Profile</h1>
-     {profile.id}
+     <div>{ profile.firstName }</div>
   </div>;
 
 const mapStateToProps = ({ patient: { profile } }) => ({

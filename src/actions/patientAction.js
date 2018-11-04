@@ -19,7 +19,7 @@ export let getPatientProfile = (id) => {
   return (dispatch) => {
     axios.get(url).then(
       (response) => {
-        let profile = response.data.data.id
+        let profile = response.data.data.attributes
         dispatch(setPatientProfile(profile))
       },
       (err) => {
