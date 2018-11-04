@@ -10,7 +10,7 @@ export let patientsReducer = (state = { isFetching: false, patientsArray: [] }, 
         case 'End_Patient_Search':
             return {
                 isFetching: false,
-                patientsArray: action.patientsArray
+                patientsArray: action.patientsArray,
             }
         break;
         default: return state;

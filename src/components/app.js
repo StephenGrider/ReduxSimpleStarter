@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Card from './Card/Card';
+import PatientList from './PatientList/PatientList'
+import PatientProfile from './PatientProfile/PatientProfile'
 let actions = require('../actions/index');
 
 export class App extends Component {
@@ -16,23 +17,13 @@ export class App extends Component {
     } else if (patients.isFetching == false && patients.patientsArray.length >=1) {
       return (
         <div>
-          <div className="">
-            { patients.patientsArray.map((patient) =>
-              <Card
-                address={ patient.attributes.address }
-                avatarUrl={ patient.attributes.avatarUrl }
-                dob={ patient.attributes.dateOfBirth }
-                key={ patient.attributes.firstName }
-                firstName={ patient.attributes.firstName }
-                lastName={ patient.attributes.lastName }
-              />)
-            }
-          </div>
+          <PatientList/>
+          <PatientProfile />
         </div>
       )
     } else {
       return (
-        <p>PLEASE WORK</p>
+        <p>Sorry, something's gone wrong!</p>
       )
     }
   }
