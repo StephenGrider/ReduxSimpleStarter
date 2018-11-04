@@ -21,7 +21,7 @@ function MediaCard(props) {
   return (
     <Card>
         <CardMedia
-          className={classes.media}
+          className={ classes.media }
           image={ props.avatarUrl }
           title="Contemplative Reptile"
         />

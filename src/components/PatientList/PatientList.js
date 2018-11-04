@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Card from '../Card/Card';
+import Wound from '../Wound/Wound';
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -42,6 +43,16 @@ const PatientList = ({ patients, setPatient }) =>
                             <p>Last updated: { patient.attributes.updatedAt.slice(0, 10) }</p>
                         </Typography>
                     </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel>
+                <ExpansionPanelSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    onClick={ setPatient(i+1) }>
+                    <Typography>
+                        PATIENT WOUNDS
+                    </Typography>
+                    </ExpansionPanelSummary>
+                    <Wound />
                 </ExpansionPanel>
             </Card>
         </div>
