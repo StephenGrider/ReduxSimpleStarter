@@ -22,7 +22,7 @@ function MediaCard(props) {
   const { classes } = props;
   const formattedDate = props.dob.slice(0, 10);
   return (
-    <Card className={classes.card}>
+    <Card>
       <CardActionArea>
         <CardMedia
           className={classes.media}

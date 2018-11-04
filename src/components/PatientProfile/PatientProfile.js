@@ -12,5 +12,3 @@ const mapStateToProps = ({ patient: { profile } }) => ({
 });
 
 export default connect(mapStateToProps)(PatientProfile);
-
-

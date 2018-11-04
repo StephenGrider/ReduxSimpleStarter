@@ -6,8 +6,9 @@ import Button from '@material-ui/core/Button';
 import { setCurrentPatient, getPatientProfile } from '../../actions/patientAction'
 
 const PatientList = ({ patients, setPatient }) =>
-  <div className="">
+  <div>
     <h1>Patients</h1>
+    <div className="grid-wrapper">
     { patients.patientsArray.map((patient, i) =>
         <div key = { patient.lastName }>
             <Card
@@ -31,6 +32,7 @@ const PatientList = ({ patients, setPatient }) =>
         </div>
         )
     }
+    </div>
   </div>;
 
 const mapStateToProps = ({ patients }) => ({
