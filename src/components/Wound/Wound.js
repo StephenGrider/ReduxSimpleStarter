@@ -26,7 +26,7 @@ class WoundList extends React.Component {
 
     const styles = {
       card: {
-        maxWidth: 345,
+        maxWidth: 50,
       },
       media: {
         height: 140,
@@ -39,7 +39,9 @@ class WoundList extends React.Component {
           <List key={ wound.id } className={ classes.root }>
             <Card>
               <CardMedia>
-                <img width="345" height="140" src={ wound.attributes.imageUrl}/>
+                <div className="wound-image__wrapper">
+                  <img className="wound-image" width="100" height="100" src={ wound.attributes.imageUrl}/>
+                </div>
               </CardMedia>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">

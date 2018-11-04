@@ -15,3 +15,13 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+.wound-image__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.wound-image {
+    border-radius: 10%;
+    border: 1px solid #e2e2e2;
+}
