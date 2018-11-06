@@ -1,6 +1,8 @@
 import patientAction from '../../actions/patientAction';
 
-export let patientProfileReducer = (state = {}, action) => {
+const initialState = {};
+
+export let patientProfileReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'Set_Patient_Profile':
       return action.profile;

@@ -5,7 +5,7 @@ import PatientProfile from './PatientProfile/PatientProfile'
 let actions = require('../actions/index');
 
 export class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchPatient();
   }
 
@@ -18,7 +18,7 @@ export class App extends Component {
       return (
         <div>
           <PatientList/>
-          {/* <PatientProfile /> */}
+          <PatientProfile />
         </div>
       )
     } else {

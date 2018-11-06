@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Card from '../Card/Card';
 import Wound from '../Wound/Wound';
+import PatientProfile from '../PatientProfile/PatientProfile';
 
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -25,35 +26,49 @@ const PatientList = ({ patients, setPatient }) =>
                 firstName={ patient.attributes.firstName }
                 lastName={ patient.attributes.lastName }>
                 <ExpansionPanel>
-                <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    onClick={ setPatient(i+1) }>
-                    <Typography>
-                        PATIENT DETAILS
-                    </Typography>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        onClick={ setPatient(i+1) }>
+                            <Typography>
+                                PATIENT DETAILS
+                            </Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography>
-                            <p>Address: { patient.attributes.address }</p>
-                            <br/>
-                            <p>Room number: { patient.attributes.roomNumber }</p>
-                            <br />
-                            <p>Bed number: { patient.attributes.bedNumber }</p>
-                            <br />
-                            <p>Last updated: { patient.attributes.updatedAt.slice(0, 10) }</p>
+                        Address: { patient.attributes.address }
+                        <br/>
+                        Room number: { patient.attributes.roomNumber }
+                        <br />
+                        Bed number: { patient.attributes.bedNumber }
+                        <br />
+                        Last updated: { patient.attributes.updatedAt.slice(0, 10) }
                         </Typography>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
-                <ExpansionPanel>
-                <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    onClick={ setPatient(i+1) }>
-                    <Typography>
-                        PATIENT WOUNDS
-                    </Typography>
+                {/* <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        onClick={ setPatient(i+1) }>
+                            <Typography>
+                                PATIENT WOUNDS
+                            </Typography>
                     </ExpansionPanelSummary>
                     <Wound />
+                </ExpansionPanel> */}
+
+                <ExpansionPanel>
+                    <ExpansionPanelSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        onClick={ setPatient(i+1) }>
+                            <Typography>
+                                PATIENT WOUNDS
+                            </Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <PatientProfile />
+                    </ExpansionPanelDetails>
                 </ExpansionPanel>
+
             </Card>
         </div>
         )
@@ -62,7 +77,7 @@ const PatientList = ({ patients, setPatient }) =>
   </div>;
 
 const mapStateToProps = ({ patients }) => ({
-  patients,
+    patients,
 });
 
 const mapDispatchToProps = dispatch => ({
