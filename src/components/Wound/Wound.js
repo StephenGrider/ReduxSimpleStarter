@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+// Imports Material-Ui components
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
@@ -34,11 +34,11 @@ class WoundList extends React.Component {
     return (
       <div>
         { wounds.map(wound => (
-          <List key={ wound.attributes.id } className={ classes.root }>
-            <Card className={ classes.card }>
+          <List key={ wound.attributes.id } className={ classes.root } >
+            <Card className={ classes.card } >
               <CardContent>
                 <div className="wound-image__wrapper">
-                  <img src={ wound.attributes.imageUrl } height="140" width="140" className = "wound-image"></img>
+                  <img src={ wound.attributes.imageUrl } height="140" width="140" className = "wound-image" />
                 </div>
                 <Typography gutterBottom variant="h5" component="h2">
                   { wound.attributes.bodyLocation } wound: { wound.attributes.type }
@@ -67,5 +67,4 @@ const mapStateToProps = ({ patient: { wounds } }) => ({
   wounds,
 });
 
-// export default withStyles(styles)(WoundList);
 export default connect(mapStateToProps)(withStyles(styles)(WoundList));

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import PatientList from './PatientList/PatientList'
-import PatientProfile from './PatientProfile/PatientProfile'
+
 let actions = require('../actions/index');
 
 export class App extends Component {
@@ -18,7 +19,6 @@ export class App extends Component {
       return (
         <div>
           <PatientList/>
-          <PatientProfile />
         </div>
       )
     } else {

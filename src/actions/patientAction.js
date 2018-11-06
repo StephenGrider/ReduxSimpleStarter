@@ -21,15 +21,18 @@ export let setPatientWounds = (woundsArray) => {
   }
 }
 
+// This funcion will return another functiion that get passed the dispatch function to do async work.
+// Gets patient data using axios
+// Gets URL for patient's associated wounds and passes it to getPatientWounds function
 export let getPatientProfile = (id) => {
   let url = `http://localhost:3000/patients/${id}`
   return (dispatch) => {
     axios.get(url).then(
       (response) => {
-        let profile = response.data.data.attributes
-        let patient_wounds = response.data.data.relationships.wounds.links.related
-        console.log("PROFILE", profile, null, 2)
-        console.log("PATIENT WOUNDS", patient_wounds, null, 2)
+        let data = response.data.data
+        let profile = data.attributes
+        let patient_wounds = data.relationships.wounds.links.related
+
         dispatch(setPatientProfile(profile))
         dispatch(getPatientWounds(patient_wounds))
       },
@@ -40,29 +43,13 @@ export let getPatientProfile = (id) => {
   }
 }
 
-// // working
-// export let getPatientWounds = (url) => {
-//   return (dispatch) => {
-//     axios.get(url).then(
-//       (response) => {
-//         let woundsArray = response.data.data[0].attributes
-//         console.log("WOUNDSSS", woundsArray, null, 2)
-//         dispatch(setPatientWounds(woundsArray))
-//       },
-//       (err) => {
-//         console.log("getPatientWounds error:", err);
-//       }
-//     )
-//   }
-// }
-
-// experimental
+// This function gets the url argument passed in from getPatientProfile
 export let getPatientWounds = (url) => {
   return (dispatch) => {
     axios.get(url).then(
       (response) => {
         let woundsArray = response.data.data
-        console.log("WOUNDSSS", woundsArray, null, 2)
+
         dispatch(setPatientWounds(woundsArray))
       },
       (err) => {

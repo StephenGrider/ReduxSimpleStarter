@@ -1,5 +1,3 @@
-import patientAction from '../../actions/patientAction';
-
 const initialState = {};
 
 export let patientProfileReducer = (state = initialState, action) => {

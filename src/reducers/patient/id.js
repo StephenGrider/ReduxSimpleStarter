@@ -1,5 +1,3 @@
-import patientAction from '../../actions/patientAction';
-
 const initialState = 0;
 
 export let patientIdReducer = (state = initialState, action) => {

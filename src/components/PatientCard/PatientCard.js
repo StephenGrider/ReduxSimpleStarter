@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+// Imports Material-UI components
 import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -15,15 +17,12 @@ const styles = {
   },
 };
 
-function MediaCard(props) {
+function PatientCard(props) {
   const { classes } = props;
   const formattedDate = props.dob.slice(0, 10);
   return (
     <Card>
-        <CardMedia
-          className={ classes.media }
-          image={ props.avatarUrl }
-        />
+        <CardMedia className={ classes.media } image={ props.avatarUrl }/>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             { props.firstName } { props.lastName }
@@ -37,8 +36,8 @@ function MediaCard(props) {
   );
 }
 
-MediaCard.propTypes = {
+PatientCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(MediaCard);
+export default withStyles(styles)(PatientCard);

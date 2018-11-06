@@ -1,19 +1,20 @@
 let axios = require('axios');
 
-// This reducer indicates start of API call
+// This reducer indicates start of patients API call
 export let startPatientSearch = () => {
   return {
     type: 'Start_Patient_Search'
   }
 }
 
-// Tells redux state that api data has been received
+// Tells redux state that patients data has been received
 export let endPatientSearch = (patientsArray) => {
   return {
     type: 'End_Patient_Search',
     patientsArray
   }
 }
+
 export let fetchPatient = () => {
   let url = "http://localhost:3000/patients"
   return (dispatch) => {
