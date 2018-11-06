@@ -3,7 +3,7 @@
 My first attempt at Redux!
 
 ### Resources
-Base setup of Redux and dependencies from [here](https://github.com/StephenGrider/ReduxSimpleStarter), while styled components come from [here](https://material-ui.com/).
+Base setup of Redux and dependencies from [here](https://github.com/StephenGrider/ReduxSimpleStarter), while styled components come from https://material-ui.com/
 
 
 ### Some background info
@@ -18,4 +18,4 @@ You'll have to first run the Swify Medical API in orde to make calls to it from 
 > npm start
 ```
 
-Then navigate to [this](http://localhost:8080)
+Then navigate to http://localhost:8080
