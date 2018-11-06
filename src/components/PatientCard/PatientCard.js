@@ -22,15 +22,19 @@ function PatientCard(props) {
   const formattedDate = props.dob.slice(0, 10);
   return (
     <Card>
-        <CardMedia className={ classes.media } image={ props.avatarUrl }/>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            { props.firstName } { props.lastName }
-          </Typography>
-          <Typography component="p">
-            Date of Birth: { formattedDate }
-          </Typography>
-        </CardContent>
+        <div className="card-wrapper">
+          <CardContent className="user-info">
+            <Typography gutterBottom variant="h5" component="h2">
+              { props.firstName } { props.lastName }
+            </Typography>
+            <Typography component="p">
+              Date of Birth: { formattedDate }
+            </Typography>
+          </CardContent>
+          <div className="user-image__wrapper">
+            <img className="wound-image" src={ props.avatarUrl } />
+          </div>
+        </div>
       {props.children}
     </Card>
   );

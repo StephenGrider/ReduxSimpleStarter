@@ -16,6 +16,20 @@
     }
 }
 
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-info {
+    align-self: center;
+}
+
+.user-image__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .wound-image__wrapper {
     display: flex;
     justify-content: center;
