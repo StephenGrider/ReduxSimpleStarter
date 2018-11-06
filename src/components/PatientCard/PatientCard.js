@@ -32,7 +32,7 @@ function PatientCard(props) {
             </Typography>
           </CardContent>
           <div className="user-image__wrapper">
-            <img className="wound-image" src={ props.avatarUrl } />
+            <img className="user-image" src={ props.avatarUrl } />
           </div>
         </div>
       {props.children}
