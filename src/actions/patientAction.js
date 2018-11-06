@@ -40,11 +40,28 @@ export let getPatientProfile = (id) => {
   }
 }
 
+// // working
+// export let getPatientWounds = (url) => {
+//   return (dispatch) => {
+//     axios.get(url).then(
+//       (response) => {
+//         let woundsArray = response.data.data[0].attributes
+//         console.log("WOUNDSSS", woundsArray, null, 2)
+//         dispatch(setPatientWounds(woundsArray))
+//       },
+//       (err) => {
+//         console.log("getPatientWounds error:", err);
+//       }
+//     )
+//   }
+// }
+
+// experimental
 export let getPatientWounds = (url) => {
   return (dispatch) => {
     axios.get(url).then(
       (response) => {
-        let woundsArray = response.data.data[0].attributes
+        let woundsArray = response.data.data
         console.log("WOUNDSSS", woundsArray, null, 2)
         dispatch(setPatientWounds(woundsArray))
       },

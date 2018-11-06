@@ -23,7 +23,6 @@ function MediaCard(props) {
         <CardMedia
           className={ classes.media }
           image={ props.avatarUrl }
-          title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

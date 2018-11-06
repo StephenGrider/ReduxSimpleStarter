@@ -65,7 +65,8 @@ const PatientList = ({ patients, setPatient }) =>
                             </Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
-                        <PatientProfile />
+                        {/* <PatientProfile /> */}
+                        <Wound />
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
 

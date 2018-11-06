@@ -19,6 +19,7 @@
 .wound-image__wrapper {
     display: flex;
     justify-content: center;
+    margin-bottom: 0.35em;
 }
 
 .wound-image {
