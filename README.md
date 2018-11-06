@@ -1,25 +1,21 @@
-# ReduxSimpleStarter
+# Woundly App
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+My first attempt at Redux!
 
-### Getting Started
+### Resources
+Base setup of Redux and dependencies from [here](https://github.com/StephenGrider/ReduxSimpleStarter), while styled components come from [here](https://material-ui.com/).
 
-There are two methods for getting started with this repo.
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+### Some background info
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+This app hits [this](https://github.com/asyi/wounds-demo-api) API, courtesy of [Swift Medical](https://github.com/swiftmedical/wounds-demo-api) which only runs locally.
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+#### Running Woundly
+You'll have to first run the Swify Medical API in orde to make calls to it from Woundly. Then run Woundly like so:
 
 ```
 > npm install
 > npm start
 ```
+
+Then navigate to [this](http://localhost:8080)

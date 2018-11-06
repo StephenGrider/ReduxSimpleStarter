@@ -20,6 +20,9 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
+    proxy: {
+      '/patients': 'http://localhost:3000'
+    },
     historyApiFallback: true,
     contentBase: './',
     watchOptions: {
