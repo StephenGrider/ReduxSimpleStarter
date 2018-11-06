@@ -37,18 +37,22 @@ class WoundList extends React.Component {
           <List key={ wound.attributes.id } className={ classes.root } >
             <Card className={ classes.card } >
               <CardContent>
-                <div className="wound-image__wrapper">
-                  <img src={ wound.attributes.imageUrl } height="140" width="140" className = "wound-image" />
+                <div className="card-wrapper">
+                  <div className="wound-info">
+                    <Typography gutterBottom variant="h5" component="h2">
+                      { wound.attributes.bodyLocation } wound: { wound.attributes.type }
+                    </Typography>
+                    <Typography component="p">
+                      Acquired in House: { wound.attributes.inHouseAcquired.toString() }
+                    </Typography>
+                    <Typography component="p">
+                      Resolved: { wound.attributes.resolved.toString() }
+                    </Typography>
+                  </div>
+                  <div className="wound-image__wrapper">
+                    <img src={ wound.attributes.imageUrl } height="140" width="140" className = "wound-image" />
+                  </div>
                 </div>
-                <Typography gutterBottom variant="h5" component="h2">
-                  { wound.attributes.bodyLocation } wound: { wound.attributes.type }
-                </Typography>
-                <Typography component="p">
-                  Acquired in House: { wound.attributes.inHouseAcquired.toString() }
-                </Typography>
-                <Typography component="p">
-                  Resolved: { wound.attributes.resolved.toString() }
-                </Typography>
               </CardContent>
             </Card>
           </List>

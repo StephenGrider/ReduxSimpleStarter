@@ -25,6 +25,10 @@
     align-self: center;
 }
 
+.wound-info {
+    align-self: center;
+}
+
 .user-image__wrapper {
     display: flex;
     justify-content: center;
