@@ -1,18 +1,22 @@
 import * as firebase from 'firebase';
+import firebaseConnfig from '../../server/firebase_config';
 
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const CREATE_POST = 'CREATE_POST';
 export const FETCH_POST = "FETCH_POST";
 export const DELETE_POST = "DELETE_POST";
 
-firebase.initializeApp({
-    apiKey: "AIzaSyC-X8ep3TQUZ8SV3xX8to-pLsLWyq0k81w",
-    authDomain: "what-am-i-learning.firebaseapp.com",
-    databaseURL: "https://what-am-i-learning.firebaseio.com",
-    projectId: "what-am-i-learning",
-    storageBucket: "what-am-i-learning.appspot.com",
-    messagingSenderId: "899854942639"
-});
+/*This firebaseConnfig Object is provide by firebase
+var config = {
+    apiKey: "<API_KEY>",
+    authDomain: "<PROJECT_ID>.firebaseapp.com",
+    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+    projectId: "<PROJECT_ID>",
+    storageBucket: "<BUCKET>.appspot.com",
+    messagingSenderId: "<SENDER_ID>",
+  };*/
+  
+firebase.initializeApp(firebaseConnfig);
 
 const Posts = firebase.database();
 const basePath = '/posts';
