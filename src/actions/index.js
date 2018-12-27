@@ -1,0 +1,1 @@
+const APY_KEY = '6283fa8f27472495062573e5c70b2f0b';
