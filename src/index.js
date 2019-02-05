@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'
 import YTSearch from 'youtube-api-search';
+import VideoList from './components/video_list';
 
 
 // Create a new Component. This component should produce 
@@ -26,6 +27,7 @@ class App extends Component {
 	 return (
 	    <div>
 	      <SearchBar />
+		 <VideoList videos={this.state.videos}/>
 	    </div>
      );	
     }
