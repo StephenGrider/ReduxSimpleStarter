@@ -2,8 +2,8 @@
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
-#OutPut 
-![alt text]()
+### OutPut
+(https://github.com/vinay72/ReduxSimpleStarter/blob/master/v1.png)
 
 ### Getting Started
 
