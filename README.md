@@ -1,4 +1,4 @@
-# ReduxSimpleStarter
+# ReduxSimpleStarter.github.io
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
 
